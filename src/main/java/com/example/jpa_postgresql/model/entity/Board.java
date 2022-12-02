@@ -1,6 +1,6 @@
-package com.example.jpa_postgresql.entity;
+package com.example.jpa_postgresql.model.entity;
 
-import com.example.jpa_postgresql.annotation.ColumnPosition;
+import com.example.jpa_postgresql.framework.annotation.ColumnPosition;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -45,9 +45,6 @@ public class Board {
     @Comment("게시판_번호")
     @ColumnPosition(1)
     private long boardIdx;
-
-
-
     @CreatedDate
     @Column(name = "reg_dt", updatable = false)
     @Comment("등록_일시")

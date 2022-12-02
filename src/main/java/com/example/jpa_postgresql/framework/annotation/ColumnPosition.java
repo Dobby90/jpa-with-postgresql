@@ -1,4 +1,4 @@
-package com.example.jpa_postgresql.annotation;
+package com.example.jpa_postgresql.framework.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

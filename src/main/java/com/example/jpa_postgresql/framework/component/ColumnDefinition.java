@@ -1,4 +1,4 @@
-package com.example.jpa_postgresql;
+package com.example.jpa_postgresql.framework.component;
 
 /**
  * <pre>
@@ -23,9 +23,9 @@ public class ColumnDefinition {
 
     public ColumnDefinition(String columnDefinition) {
         try {
-            this.columnDefinition = columnDefinition;
-
             columnDefinition = columnDefinition.replaceAll("^\\s+", "");
+
+            this.columnDefinition = columnDefinition;
 
             if (columnDefinition.toLowerCase().startsWith("primary key")) {
                 position = Integer.MAX_VALUE;

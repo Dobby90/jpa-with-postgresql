@@ -8,5 +8,5 @@ spring:
       hibernate:
         # show_sql: true
         format_sql: true
-    database-platform: com.example.jpa_postgresql.config.CustomDialectConfig
+    database-platform: com.example.jpa_postgresql.framework.config.CustomDialectConfig
     open-in-view: false

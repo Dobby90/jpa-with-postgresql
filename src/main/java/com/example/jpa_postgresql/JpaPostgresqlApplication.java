@@ -1,8 +1,7 @@
 package com.example.jpa_postgresql;
 
-import com.example.jpa_postgresql.service.SchemaGenerator;
+import com.example.jpa_postgresql.service.initService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -14,19 +13,18 @@ import java.io.IOException;
 @SpringBootApplication
 public class JpaPostgresqlApplication {
 
-	public JpaPostgresqlApplication(SchemaGenerator schemaGenerator) {
-		this.schemaGenerator = schemaGenerator;
+	public JpaPostgresqlApplication(initService initService) {
+		this.initService = initService;
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(JpaPostgresqlApplication.class, args);
 	}
 
-	private final SchemaGenerator schemaGenerator;
+	private final initService initService;
 	@EventListener(ApplicationReadyEvent.class)
 	public void init() throws IOException, ClassNotFoundException {
 		log.info("Application Ready!!");
-
-		schemaGenerator.createSchema();
+		initService.initSchemaCreate();
 	}
 }

@@ -1,4 +1,4 @@
-package com.example.jpa_postgresql.config;
+package com.example.jpa_postgresql.framework.config;
 
 import com.vladmihalcea.hibernate.type.array.StringArrayType;
 import org.hibernate.dialect.PostgreSQL10Dialect;

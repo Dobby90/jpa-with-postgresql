@@ -1,4 +1,4 @@
-package com.example.jpa_postgresql.config;
+package com.example.jpa_postgresql.framework.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
